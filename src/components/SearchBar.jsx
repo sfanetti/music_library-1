@@ -1,6 +1,9 @@
 import { useState } from "react";
+import { useContext } from "react";
+import { DataContext } from "../contexts/DataContext";
 
-export default function SearchBar({ setSearch }) {
+export default function SearchBar() {
+    const { setSearch } = useContext(DataContext);
     let [searchTerm, setSearchTerm] = useState('');
 
     let onSearchSubmit = e => {
